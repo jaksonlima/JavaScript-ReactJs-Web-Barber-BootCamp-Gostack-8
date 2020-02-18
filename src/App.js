@@ -1,8 +1,13 @@
 import React from "react";
-import "./App.css";
+import { BrowserRouter as Router } from "react-router-dom";
 
-function App() {
-  return <h1>APP</h1>;
+import Routers from "./routes/index";
+import "./config/ReactotronConfig";
+
+export default function App() {
+  return (
+    <Router>
+      <Routers />
+    </Router>
+  );
 }
-
-export default App;

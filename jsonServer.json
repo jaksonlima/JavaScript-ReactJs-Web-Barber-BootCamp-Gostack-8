@@ -1,0 +1,13 @@
+{
+  "users": [
+    {
+      "name": "jakson lima",
+      "email": "jaksonsneider@hotmail.com",
+      "password": "12345678",
+      "provider": true,
+      "token": 1,
+      "id": 1
+    }
+  ],
+  "sessions": []
+}

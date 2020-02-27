@@ -4,24 +4,24 @@ import { Route, Redirect } from "react-router-dom";
 import AuthLayout from "../pages/_layouts/auth/index";
 import DefaultLayout from "../pages/_layouts/default/index";
 
+import { store } from "../store/index";
+
 export default function RouteWrapper({
   component: Component,
   isPrivate = false,
   ...rest
 }) {
-  const singned = false;
+  const { signed } = store.getState().auth;
 
-  if (!singned && isPrivate) {
+  if (!signed && isPrivate) {
     return <Redirect to="/" />;
   }
 
-  if (singned && !isPrivate) {
+  if (signed && !isPrivate) {
     return <Redirect to="/deshboard" />;
   }
-  // console.tron.log(DefaultLayout);
-  const Layout = singned == true ? DefaultLayout : AuthLayout;
 
-  console.tron.log(Layout);
+  const Layout = signed ? DefaultLayout : AuthLayout;
 
   return (
     <Route

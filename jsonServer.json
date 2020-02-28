@@ -2,11 +2,19 @@
   "users": [
     {
       "name": "jakson lima",
+      "email": "jaksonsneider@gmail.com",
+      "password": "123456789",
+      "provider": true,
+      "token": 2,
+      "id": 1
+    },
+    {
+      "name": "jakson lima",
       "email": "jaksonsneider@hotmail.com",
       "password": "12345678",
       "provider": true,
-      "token": 1,
-      "id": 1
+      "token": 4,
+      "id": 2
     }
   ],
   "sessions": []

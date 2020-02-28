@@ -7,17 +7,22 @@ import history from "../../../services/history";
 
 export function* signIn({ payload }) {
   try {
-    const { email, password } = payload;
+    let { email, password } = payload;
 
     const response = yield call(
       api.get,
       `users?email=${email}&password=${password}`
     );
 
-    const { token, user } = response.data;
+    const user = response.data.find(e => {
+      return e.email === email && e.password === password;
+    });
 
-    if (!user.provider) {
-      toast.error("Usuario não é prestador");
+    const { token, provider } = user;
+
+    if (!provider) {
+      toast.error("Usuario não é um prestador.");
+      yield put(signFailure());
       return;
     }
 
@@ -53,10 +58,7 @@ export function* signUp({ payload }) {
 
     toast.success("Cadastro realizado com sucesso seja bem vindo.");
 
-    setTimeout(() => {
-      history.push("/");
-      console.log("time entrou");
-    }, 5000);
+    setTimeout(() => history.push("/"), 5000);
   } catch (error) {
     toast.error("Falha no cadastro, verifique seus dados.");
 
@@ -64,7 +66,14 @@ export function* signUp({ payload }) {
   }
 }
 
+export function setToke({ payload }) {
+  if (!payload) return;
+
+  api.defaults.headers.Authorization = `Bear ${payload.auth.token}`;
+}
+
 export default all([
+  takeLatest("persist/REHYDRATE", setToke),
   takeLatest("@auth/SIGN_IN_REQUEST", signIn),
   takeLatest("@auth/SIGN_UP_REQUEST", signUp)
 ]);

@@ -3,17 +3,17 @@
     {
       "name": "jakson lima",
       "email": "jaksonsneider@gmail.com",
-      "password": "123456789",
+      "password": "12345678",
       "provider": true,
-      "token": 2,
+      "token": 3,
       "id": 1
     },
     {
-      "name": "jakson lima",
-      "email": "jaksonsneider@hotmail.com",
-      "password": "12345678",
+      "name": "bruna",
+      "email": "",
+      "password": "",
       "provider": true,
-      "token": 4,
+      "token": 5,
       "id": 2
     }
   ],

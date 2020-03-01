@@ -14,7 +14,7 @@ export default function Routers() {
     <Switch>
       <Route path="/" exact component={SignIn} />
       <Route path="/register" component={SignUp} />
-      <Route path="/deshboard" component={Deshboard} />
+      <Route path="/deshboard" component={Deshboard} isPrivate />
       <Route path="/profile" component={Profile} isPrivate />
     </Switch>
   );

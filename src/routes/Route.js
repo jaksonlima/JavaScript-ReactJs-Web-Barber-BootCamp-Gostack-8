@@ -16,7 +16,6 @@ export default function RouteWrapper({
   if (!signed && isPrivate) {
     return <Redirect to="/" />;
   }
-
   if (signed && !isPrivate) {
     return <Redirect to="/deshboard" />;
   }
@@ -28,7 +27,7 @@ export default function RouteWrapper({
       {...rest}
       render={props => (
         <Layout>
-          <Component />
+          <Component {...props} />
         </Layout>
       )}
     />

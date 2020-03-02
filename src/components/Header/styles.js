@@ -46,7 +46,7 @@ export const Profile = styled.div`
     margin-right: 10px;
 
     strong {
-      display: flex;
+      display: block;
       color: #333;
     }
 

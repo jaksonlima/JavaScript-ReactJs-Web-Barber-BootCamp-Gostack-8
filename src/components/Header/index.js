@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import { Container, Content, Profile } from "./styles";
+import Notifications from "../Notifications/index";
 import logoPurple from "../../assets/logo-purple.svg";
 
 export default function Header() {
@@ -11,18 +12,19 @@ export default function Header() {
         <Content>
           <nav>
             <img src={logoPurple} alt="GoBarber" />
-            <Link to="/dashboard">DASHBOARD</Link>
+            <Link to="/deshboard">DESHBOARD</Link>
           </nav>
 
           <aside>
+            <Notifications />
             <Profile>
               <div>
-                <strong>Diego Fernandes</strong>
+                <strong>Jakson Lima</strong>
+                <Link to="/profile">Meu Perfil</Link>
               </div>
-              <Link to="/profile">Meu Perfil</Link>
               <img
                 src="https://api.adorable.io/avatars/50/abott@adorable.png"
-                alt="Jakson Lim"
+                alt="fack"
               />
             </Profile>
           </aside>

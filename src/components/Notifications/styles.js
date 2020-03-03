@@ -6,7 +6,7 @@ export const Container = styled.div`
   position: relative;
 `;
 
-export const Badge = styled.div`
+export const Badge = styled.button`
   background: none;
   border: 0;
   position: relative;
@@ -20,7 +20,7 @@ export const Badge = styled.div`
         top: 0;
         width: 8px;
         height: 8px;
-        background: #fff892e;
+        background: #ff892e;
         content: "";
         border-radius: 50%;
       }
@@ -30,8 +30,8 @@ export const Badge = styled.div`
 export const NotificationList = styled.div`
   position: absolute;
   width: 260px;
-  left: calc(50% - 130);
-  top: calc(100% - 30px);
+  left: calc(50% - 130px);
+  top: calc(100% + 30px);
   background: rgba(0, 0, 0, 0.6);
   border-radius: 4px;
   padding: 15px 5px;
@@ -60,7 +60,7 @@ export const Notification = styled.div`
   & + div {
     margin-top: 15px;
     padding-top: 15px;
-    border-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   p {
@@ -89,8 +89,8 @@ export const Notification = styled.div`
       &::after {
         content: "";
         display: inline-block;
-        width: 6px;
-        height: 6px;
+        width: 8px;
+        height: 8px;
         background: #ff892e;
         border-radius: 50%;
       }

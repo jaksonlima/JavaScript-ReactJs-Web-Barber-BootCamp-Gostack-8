@@ -1,5 +1,9 @@
-import React from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { MdNotifications } from "react-icons/md";
+import { parseISO, formatDistance } from "date-fns";
+import pt from "date-fns/locale/pt";
+
+import api from "../../services/api";
 
 import {
   Container,
@@ -10,13 +14,41 @@ import {
 } from "./styles";
 
 export default function Notifications() {
+  const [visible, setVisible] = useState(false);
+  const [notifications, setNotifications] = useState([]);
+
+  useEffect(() => {
+    const loadNotifications = async () => {
+      const response = await api.get("notifications");
+
+      console.log(response);
+
+      const data = response.data.map(notification => ({
+        ...notification,
+        timeDistance: formatDistance(
+          parseISO(notification.createAt),
+          new Date(),
+          { addSuffix: true, locale: pt }
+        )
+      }));
+
+      setNotifications(data);
+    };
+
+    loadNotifications();
+  }, []);
+
+  function handleToggleVisible() {
+    setVisible(!visible);
+  }
+
   return (
     <Container>
-      <Badge hasUnread>
+      <Badge onClick={handleToggleVisible} hasUnread>
         <MdNotifications color="#7158c1" size={20} />
       </Badge>
 
-      <NotificationList>
+      <NotificationList visible={visible}>
         <Scroll>
           <Notification unread>
             <p>Voce possui um novo agendamento para amanha</p>

@@ -25,5 +25,31 @@
       "id": 3
     }
   ],
-  "sessions": []
+  "sessions": [],
+  "notifications": [
+    {
+      "read": true,
+      "id": 1,
+      "content": "Novo agendamento para dia 24 de Abril, ás 21:00h.",
+      "user": 1,
+      "createAt": "2020-03-03T23:49:56.112Z",
+      "updateAt": "2020-03-03T23:49:56.112Z"
+    },
+    {
+      "read": true,
+      "id": 1,
+      "content": "Novo agendamento para dia 24 de Abril, ás 21:00h.",
+      "user": 1,
+      "createAt": "2020-03-03T23:49:56.112Z",
+      "updateAt": "2020-03-03T23:49:56.112Z"
+    },
+    {
+      "read": true,
+      "id": 1,
+      "content": "Novo agendamento para dia 24 de Abril, ás 21:00h.",
+      "user": 1,
+      "createAt": "2020-03-03T23:49:56.112Z",
+      "updateAt": "2020-03-03T23:49:56.112Z"
+    }
+  ]
 }

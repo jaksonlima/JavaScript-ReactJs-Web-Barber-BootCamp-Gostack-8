@@ -25,7 +25,7 @@ export default function Header() {
                 <Link to="/profile">Meu Perfil</Link>
               </div>
               <img
-                src="https://api.adorable.io/avatars/50/abott@adorable.png"
+                src="https://scontent.fcac3-1.fna.fbcdn.net/v/t1.0-9/p960x960/80386294_2601296719988893_8250196507018395648_o.jpg?_nc_cat=102&_nc_sid=dd7718&_nc_ohc=K6tVcInKUn4AX8DURnb&_nc_ht=scontent.fcac3-1.fna&_nc_tp=6&oh=83d99d9bfdb75e4c315dd0ab5fb88255&oe=5E947731"
                 alt="fack"
               />
             </Profile>

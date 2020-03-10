@@ -8,10 +8,11 @@ export default function user(state = INITIAL_STATE, action) {
   return produce(state, draft => {
     switch (action.type) {
       case "@auth/SIGN_IN_SUCCESS": {
-        const { name, email, ...rest } = action.payload.user;
+        const { name, email, id } = action.payload.user;
         draft.profile = {
           name,
-          email
+          email,
+          id
         };
         break;
       }

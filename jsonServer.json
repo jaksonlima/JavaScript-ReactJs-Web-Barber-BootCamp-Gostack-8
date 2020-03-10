@@ -6,12 +6,7 @@
       "password": "12345678",
       "provider": true,
       "token": 3,
-      "id": 1,
-      "avatar": {
-        "url": "https://avatars3.githubusercontent.com/u/47370114?v=4",
-        "id": 1,
-        "path": ""
-      }
+      "id": 1
     },
     {
       "name": "bruna",
@@ -19,12 +14,7 @@
       "password": "",
       "provider": true,
       "token": 5,
-      "id": 2,
-      "avatar": {
-        "url": "https://avatars3.githubusercontent.com/u/47370114?v=4",
-        "id": 1,
-        "path": ""
-      }
+      "id": 2
     },
     {
       "name": "jakson lima",
@@ -32,12 +22,7 @@
       "password": "123456789",
       "provider": true,
       "token": 4,
-      "id": 3,
-      "avatar": {
-        "url": "https://avatars3.githubusercontent.com/u/47370114?v=4",
-        "id": 1,
-        "path": ""
-      }
+      "id": 3
     }
   ],
   "sessions": [],
@@ -69,13 +54,9 @@
   ],
   "files": [
     {
-      "url": "https://scontent.fcac3-1.fna.fbcdn.net/v/t1.0-9/p960x960/80386294_2601296719988893_8250196507018395648_o.jpg?_nc_cat=102&_nc_sid=dd7718&_nc_ohc=K6tVcInKUn4AX8DURnb&_nc_ht=scontent.fcac3-1.fna&_nc_tp=6&oh=83d99d9bfdb75e4c315dd0ab5fb88255&oe=5E947731",
-      "80386294_2601296719988893_8250196507018395648_o.jpg": "",
-      "id": 1
-    },
-    {
-      "80386294_2601296719988893_8250196507018395648_o.jpg": "",
-      "id": 2
+      "id_user": 1,
+      "avatar_id": 1,
+      "url_avatar": "https://scontent.fcac3-1.fna.fbcdn.net/v/t1.0-9/p960x960/80386294_2601296719988893_8250196507018395648_o.jpg?_nc_cat=102&_nc_sid=dd7718&_nc_ohc=K6tVcInKUn4AX8DURnb&_nc_ht=scontent.fcac3-1.fna&_nc_tp=6&oh=83d99d9bfdb75e4c315dd0ab5fb88255&oe=5E947731"
     }
   ]
 }

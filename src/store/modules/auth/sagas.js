@@ -72,8 +72,12 @@ export function setToke({ payload }) {
   api.defaults.headers.Authorization = `Bear ${payload.auth.token}`;
 }
 
+export function signOut() {
+  history.push("/");
+}
 export default all([
   takeLatest("persist/REHYDRATE", setToke),
   takeLatest("@auth/SIGN_IN_REQUEST", signIn),
-  takeLatest("@auth/SIGN_UP_REQUEST", signUp)
+  takeLatest("@auth/SIGN_UP_REQUEST", signUp),
+  takeLatest("@auth/SIGN_OUT", signOut)
 ]);
